@@ -67,7 +67,7 @@ We compare two distinct architectural paradigms:
 | Model | Architecture | Performance (Test Accuracy) |
 |-------|-------------|----------------------------|
 | CatBoost | GBDT (Gradient Boosted Decision Trees) with symmetric trees | **90.0%** (evaluated on 300 patients) |
-| 1D-CNN | PyTorch implementation with Conv1d layers and BatchNorm | 68.1% (evaluated on all 10,742 patients) |
+| 1D-CNN | PyTorch implementation with Conv1d layers and BatchNorm | 83.3% (evaluated on all 10,742 patients) |
 
 # Key Observations:
 - CatBoost demonstrates excellent accuracy but was tested on a smaller subset of patients
