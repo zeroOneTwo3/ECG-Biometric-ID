@@ -1,0 +1,6 @@
+name: ECG-Biometric-ID
+environments:
+  default:
+    - environment.yml
+variables: {}
+commands: {}

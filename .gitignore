@@ -1,0 +1,31 @@
+# --- Data & Models ---
+data/
+models/
+*.pkl
+*.pth
+
+# --- CatBoost logs ---
+catboost_info/
+
+# --- Local Anaconda metadata ---
+anaconda_projects/
+.condarc
+
+requirements.txt
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# --- Python & Environments ---
+__pycache__/
+*.py[cod]
+env/
+venv/
+.env
+
+# --- OS & IDEs ---
+.DS_Store
+.vscode/
+.idea/

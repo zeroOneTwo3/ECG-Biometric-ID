@@ -1,0 +1,23 @@
+name: ecg-biometrics
+channels:
+  - pytorch        # Specifically for optimized torch binaries
+  - conda-forge    # Primary channel for stability
+  - defaults
+dependencies:
+  - python=3.12    # Optimized for 2026 ML stability
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - scikit-learn
+  - tqdm
+  - setuptools
+  - wheel
+  - pytorch        # Installs the framework
+  - cpuonly        # Replace with 'pytorch-cuda=12.1' if you have an NVIDIA GPU
+  - pip:
+      - catboost   # Often more stable via pip for the latest Python hooks
+      - wfdb       # Essential for PTB-XL data loading
+      - torchinfo  # For your CNN architecture summaries
+      - requests
