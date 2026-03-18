@@ -40,10 +40,12 @@ ECG-Biometric-ID/
 ```
 
 ### Create the environment
-conda env create -f environment.yml
+
+``` conda env create -f environment.yml ```
 
 ### Activate the environment
-conda activate ecg-biometrics
+
+``` conda activate ecg-biometrics ```
 
 # Pipeline Stages
 
