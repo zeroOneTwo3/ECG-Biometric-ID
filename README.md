@@ -56,9 +56,9 @@ Filters for high-quality clinical records with consistent lead placement.
 
 ## 2. Signal Processing (02_preprocessing.ipynb)
 
-QRS Detection: Locates the heartbeats within the 10-second strips.
-Segmentation: Extracts 200ms windows around the R-peak.
-Normalization: Applies Z-score standardization to stabilize gradients for CNN training.
+- *QRS Detection*: Locates the heartbeats within the 10-second strips.
+- *Segmentation*: Extracts 200ms windows around the R-peak.
+- *Normalization*: Applies Z-score standardization to stabilize gradients for CNN training.
 
 ## 3. Model Benchmarking (03_model_benchmarking.ipynb)
 
