@@ -19,8 +19,8 @@ The goal is to extract a unique "cardiac fingerprint" from 2-lead ECG signals (L
 
 The core challenge is a multi-class classification problem where the goal is to map a short segment of an ECG signal to a specific identity.
 
-Input: A 400ms window centered on the R-peak of a filtered, normalized ECG signal (2 channels).
-Target (Y): The unique Patient ID.
+- Input: A 400ms window centered on the R-peak of a filtered, normalized ECG signal (2 channels).
+- Target (Y): The unique Patient ID.
 
 # Installation & Setup
 
@@ -67,12 +67,10 @@ We compare two distinct architectural paradigms:
 | Model | Architecture | Performance (Test Accuracy) |
 |-------|-------------|----------------------------|
 | CatBoost | GBDT (Gradient Boosted Decision Trees) with symmetric trees | **90.0%** (evaluated on 300 patients) |
-| 1D-CNN | PyTorch implementation with Conv1d layers and BatchNorm | 83.3% (evaluated on all 10,742 patients) |
+| 1D-CNN | PyTorch implementation with Conv1d layers and BatchNorm | 83.3% (evaluated on all 10,472 patients) |
 
 # Key Observations:
-- CatBoost demonstrates excellent accuracy but was tested on a smaller subset of patients
+- CatBoost demonstrates good accuracy but was tested on a smaller subset of patients
 - CatBoost provides extreme precision on smaller subsets but encounters a computational bottleneck as class counts exceed 1,000
 - The 1D-CNN model was evaluated on the complete dataset, providing a more comprehensive assessment
-- The performance gap suggests that tree-based models may capture ECG morphology features more effectively than convolutional approaches for this specific task
-
-
+- To make sure that our CNN is truly learning the heartbeat, not the noise we should perform The "Chronological" or "Block" Split (the model is trained on one window of time and tested on a later window of time).
