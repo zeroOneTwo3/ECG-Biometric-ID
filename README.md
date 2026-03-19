@@ -30,13 +30,15 @@ This project uses Conda for environment management to ensure compatibility betwe
 
 ```
 ECG-Biometric-ID/
-├── data/                   # (Excluded from Git) Raw PTB-XL files
+├── data/                             # (Excluded from Git) Raw and Processed PTB-XL files
+├── models/                           # (Excluded from Git) Saved model weights (.pth, .pkl)
+│   └── biometric_cnn_best.pth
 ├── notebooks/
-│   ├── 01_data_loading.ipynb      # Was: ptb_xl_data_loader
-│   ├── 02_preprocessing.ipynb     # Was: ptb_xl_data_processing
-│   └── 03_model_benchmarking.ipynb # Was: train_ml_models
-├── environment.yml         # Conda environment definition
-└── README.md               # Project documentation
+│   ├── 01_data_loading.ipynb         # Dataset acquisition: Downloads PTB-XL and saves it on the disk
+│   ├── 02_preprocessing.ipynb        # Signal Engineering: filtering, 10-beat segmenting, normalization, mapping
+│   └── 03_model_benchmarking.ipynb   # Model Factory: Benchmarks CatBoost vs. BiometricCNN
+├── environment.yml                   # Conda environment definition
+└── README.md                         # Project documentation
 ```
 
 ### Create the environment
